@@ -1,10 +1,12 @@
 class Person
 
-attr_reader :name, :age
+attr_reader :passenger_1
 
-  def initialize(name, age)
-    @name = name
-    @age = age
+  def initialize(person)
+    @passenger_1 = {
+      name: "Doris",
+      age: 101
+    }
   end
 
 

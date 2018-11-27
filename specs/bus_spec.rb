@@ -7,7 +7,7 @@ require_relative("../person")
 class BusTest < MiniTest::Test
 
   def setup
-    # person_1 = Person.new("Doris", 101)
+    @passenger_1 = Person.new([:passenger_1])
     @bus_1 = Bus.new("22", "Ocean Terminal", [])
   end
 
@@ -27,10 +27,11 @@ class BusTest < MiniTest::Test
     assert_equal(0, @bus_1.number_of_passengers)
   end
 
-  # def test_add_passenger_to_bus
-  #   # @bus_1.add_passenger_to_bus("Doris", 101)
-  #   assert_equal(@passengers, @bus_1.add_passenger_to_bus("Doris", 101))
-  # end
-  #
+  def test_add_passenger_to_bus
+    @bus_1.add_passenger_to_bus(@passenger_1)
+    @bus_1.number_of_passengers
+    assert_equal(1, @bus_1.number_of_passengers)
+  end
+
 
 end

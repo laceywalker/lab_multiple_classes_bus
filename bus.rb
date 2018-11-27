@@ -17,9 +17,9 @@ attr_reader :route_number, :destination, :passengers
     return @passengers.count
   end
 
-  # def add_passenger_to_bus(person, age)
-  #   passengers << person_1
-  # end
+  def add_passenger_to_bus(person)
+    @passengers <<  @passenger_1
+  end
 
 
 
